@@ -1,0 +1,358 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of reset code */
+
+$primColor: #66021a;
+$secColor: #c9002f;
+$textColor: #590016; // #77001c;
+
+body {
+    background-color: #590016;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.header {
+    p, a, b, h1,h2,h2,h3,h4,h5, div {
+        color: #f2324f;
+    }
+    padding-top: 30px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    text-align: center;
+    div {
+        padding-left: 20px;
+        font-size: 42px;
+        display: inline-block;
+
+        &:hover {
+            font-weight: bold;
+
+            .about-content {
+//                visibility: visible;
+            }
+        }
+    }
+    .contact {
+        padding-left: 20px;
+    }
+    z-index: -10;
+}
+
+.about-content {
+
+    // On top of div
+    z-index: 10;
+    position: fixed; // absolute;
+    top: 140px;
+    bottom: 10px;
+    p {
+        text-align: center;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 40px;
+
+        font-size: 42px;
+    }
+    left: 16%;
+    right: 14%;
+
+    // font-size: 42px;
+    width: 70%;
+    height: auto;
+
+    background-color: rgba(255, 20, 50, 0.5); // $secColor; // #C0C0C0;
+    // opacity: 0.7; // 0.2;
+
+    color: black;
+
+//    visibility: hidden;
+}
+
+.contact-content {
+    visibility: hidden;
+
+    // On top of div
+    z-index: 10;
+    position: fixed; // absolute;
+    top: 140px;
+    bottom: 10px;
+    p {
+        text-align: center;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 40px;
+
+        font-size: 42px;
+    }
+    left: 16%;
+    right: 14%;
+
+    // font-size: 42px;
+    width: 70%;
+    height: auto;
+
+    background-color: rgba(255, 20, 50, 0.5); // $secColor; // #C0C0C0;
+    // opacity: 0.7; // 0.2;
+
+    color: black;
+
+//    visibility: hidden;
+}
+
+.close-about-content {
+    /*
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    left: 40%;
+    width: 10%;
+    background-color: brown;
+    bottom: 20px;
+    //background-color: blue;
+    */
+//    background-color: yellow;
+    position: fixed;
+    z-index: 11;
+    //top: 160px;
+    //bottom: 10px;
+    text-align: center;
+
+    left: 690px;
+    bottom: 50px;
+
+    width: 30px;
+    height: 20px;
+
+    font-size: 30px;
+    a {
+        background-color: $textColor;
+        color: #f2324f;
+        text-decoration: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &:hover {
+        background-color: darkbrown;
+        font-weight: bold;
+    }
+}
+
+.close-contact-content {
+    visibility: hidden;
+    position: fixed;
+    z-index: 11;
+
+    text-align: center;
+
+    left: 690px;
+    bottom: 50px;
+
+    width: 30px;
+    height: 20px;
+
+    font-size: 30px;
+    a {
+        background-color: $textColor;
+        color: #f2324f;
+        text-decoration: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &:hover {
+        background-color: darkbrown;
+        font-weight: bold;
+    }
+}
+
+.main {
+    z-index: 0;
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+}
+.container {
+    /* background-size: 320px 256px; */
+    /* height: 224px; */
+    /* width: 33%; /* 438px; */
+    border: 2px solid white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    z-index: 0;
+    width: 30%;
+    height: auto;
+
+    //img {
+        &:hover {
+            z-index: 2;
+            transition: all 400ms ease-in;
+            transform: scale(1.2);
+
+            img {
+                animation: imageAnim 4s forwards;
+            }
+        }
+    //}
+
+    h2 {
+        position: absolute;
+        bottom: 280px;
+    }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: -0.6;
+      transform: translate3d(0, 100%, 0);
+      bottom: 20px;
+      font-size: 0px;
+  }
+
+  to {
+      opacity: 1;
+      transform: none;
+      bottom: 72px;
+      font-size: 28px;
+  }
+}
+
+@keyframes imageAnim {
+
+  from {
+      /*
+    filter: blur(0px);
+    filter: brightness(100%);
+    */
+    filter: blur(4px);
+    filter: brightness(30%);
+ }
+
+  to {
+      /*
+      filter: blur(4px);
+      filter: brightness(30%);
+      */
+      filter: blur(0px);
+      filter: brightness(100%);
+  }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: none;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+.content {
+// ____Sizes image-containers____
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+// ____________________________
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #e01836;
+    font-size: 40px;
+    width: 100%;
+    /* content: url('https://pbs.twimg.com/profile_images/993504415/css_400x400.png'); */
+
+    p {
+        visibility: hidden;
+        animation: fadeOutDown 4s;
+        position: absolute;
+        bottom: 20px;
+        left: 60px;
+        font-size: 28px;
+    }
+
+    &:hover {
+        p {
+            visibility: visible;
+            bottom: 72px;
+            animation: fadeInUp 3s;
+        }
+    }
+}
+
+img {
+    animation: forwards;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+
+    filter: blur(4px);
+    filter: brightness(30%);
+
+    &:hover {
+        animation: imageAnim 4s;
+        animation-timing-function:linear;
+        animation-delay:1s;
+        animation-fill-mode:forwards;
+        animation-iteration-count: 1;
+    }
+}

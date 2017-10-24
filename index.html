@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+    <div class="header">
+        <div class="about"><h2><a href="#">About</a></h2></div>
+        <div class="contact"><h2><a href="#">Contact</a></h2></div>
+    </div>
+
+    <div class="about-content">
+        <p>
+            I am a young web developer keen to improve my skills while
+            extending the reach of small bussiness's by making their information
+            and services known digitally. <br/><br/>
+            Whether its a blog or website you're after - I aspire to deliver
+            a satisfying product at an affordable price. <br/><br/>
+            Got an existing site  which feels outdated, I'll be happy to modernize
+            it. <br/><br/>
+            You are welcome to view my portfolio and contact me. <br/> 
+        </p>
+    </div>
+    <div class="close-about-content"><a href="#" class="closeAbout">Close?</a></div>
+
+    <div class="contact-content">
+        <p>
+            Lorem ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+    </div>
+    <div class="close-contact-content"><a href="#" class="closeContact">Close?</a></div>
+
+    <div class="main">
+        <div class="grid-sizer">
+            <div class="container">
+                <img src="https://pbs.twimg.com/profile_images/993504415/css_400x400.png">
+                <div class="content">
+                    <h2> RGH Diesal Generators </h2>
+                    <p> pddldldl </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="https://pbs.twimg.com/profile_images/993504415/css_400x400.png">
+                <div class="content">
+                    <h2> RGH Diesal Generators </h2>
+                    <p> I really enjoyed creating this <br/>
+                        single page application
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="https://pbs.twimg.com/profile_images/993504415/css_400x400.png">
+                    <div class="content">
+                    <h2> RGH Diesal Generators </h2>
+                    <p> This Portfolio website was inspired by <br/>
+                        Madebrave
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="https://pbs.twimg.com/profile_images/993504415/css_400x400.png">
+                <div class="content">
+                    <h2> Horse riding website </h2>
+                    <p> This was a lot <br/>
+                    of fun <br/> and gave me <br/> a lot
+                    <br/> of practice
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <img src="https://pbs.twimg.com/profile_images/993504415/css_400x400.png">
+                    <div class="content">
+                        <h2> Vue Masonry SASS </h2>
+                        <p> This project is <br/>
+                            a prototype and will soon
+                            <br/> converted <br/> into a Vue
+                            <br/> application
+                        </p>
+                    </div>
+            </div>
+            <div class="container">
+                <img src="https://pbs.twimg.com/profile_images/993504415/css_400x400.png">
+                <div class="content">
+                        <h2> Notice: </h2>
+                        <p> When the height of this
+                        paragraph exceeds the vertical position of
+                        the header tag - things
+                        begin to overlap this may be fixable
+                        but for now I'm just going to leave it as is
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+
+        /*
+        Currently Masonry does not work - ignore
+        This might help: https://stackoverflow.com/questions/12088733/jquery-masonry-not-working
+        */
+
+        $(document).ready(function($){
+            var $container = $('.main');
+            setTimeout(function(){
+                // initialize
+                $container.masonry({
+                  columnWidth: '.grid-sizer',
+                  itemSelector: '.container'
+                });
+            }, 200);
+
+            /* When "about" is clicked: display "about-content" */
+            $('.about,.closeAbout').click(function() {
+                $('.contact-content, .closeContact, .close-contact-content').fadeOut(1800);
+                $('.about-content, .closeAbout, .close-about-content').fadeToggle(1800);
+            });
+            /*
+            $(".about-content-close").click(function() {
+                $('.about-content').fadeOut(2000);
+            });
+            */
+
+            /* When "contact" is clicked: display "contact-content" */
+            $('.contact,.closeContact').click(function() {
+                $('.contact-content, .closeContact, .close-contact-content').css('visibility','visible');
+                $('.about-content, .closeAbout, .close-about-content').fadeOut(1800);
+                $('.contact-content, .closeContact, .close-contact-content').fadeToggle(1800);
+            });
+
+        });
+
+        /*
+        // layout Masonry after each image loads
+        $container.imagesLoaded().progress( function() {
+          $container.masonry('layout');
+        });
+        */
+
+        /* // The following code for some reason stopped working (but this above doea)
+        var $grid = $('.main').masonry({
+            // columnWidth: '.grid-sizer',
+            itemSelector: '.container',
+            percentPosition: true
+        });
+
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry('layout');
+        });
+        */
+
+        /*
+        $.fn.extend({
+            animateCss: function (animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                this.addClass('animated ' + animationName).one(animationEnd, function() {
+                    $(this).removeClass('animated ' + animationName);
+                });
+                return this;
+            }
+        });
+
+        $(document).ready(function() {
+            $('.content').mouseover(function() {
+                $(this).animateCss('fadeInUp');
+            });  */
+            /* // Doesn't work
+            $(this).mouseleave(function() {
+                $(this).animateCss('fadeOutDown');
+            });
+            *
+        }); */
+
+        </script>
+    </body>
+</html>
