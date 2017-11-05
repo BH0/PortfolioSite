@@ -256,7 +256,8 @@ filter: brightness(100%);
 
 @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
    .content { 
-      width: 33%;  
+      width: 33%; 
+      height: auto; 
   } 
 }
 
