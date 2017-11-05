@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="style.css">
 
     </head>
-    <body>
+    <body id="main-body">
 
     <div class="header">
         <div class="about"><h2><a href="#">About</a></h2></div>
@@ -117,7 +117,18 @@
                 $('.contact-content, .closeContact, .close-contact-content').fadeToggle(1800);
 
             });
-        });
+            
+            /// Snow Effect 
+            var body = document.getelementById("main-body"); 
+            var snow= document.createElement("div");
+            snow.classList.add("snow"); 
+
+            body.appendChild(snow); 
+
+
+        }); 
+            
+            
 
         </script>
     </body>
