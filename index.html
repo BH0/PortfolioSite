@@ -18,14 +18,8 @@
 
     <div class="about-content">
         <p>
-            I am a young web developer keen to improve my skills while
-            extending the reach of small bussiness's by making their information
-            and services known digitally. <br/><br/>
-            Whether its a blog or website you're after - I aspire to deliver
-            a satisfying product at an affordable price. <br/><br/>
-            Got an existing site  which feels outdated, I'll be happy to modernize
-            it. <br/><br/>
-            You are welcome to view my portfolio and contact me. <br/>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac turpis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam malesuada neque diam, sit amet commodo lectus fringilla elementum. Vivamus non augue tellus. Aliquam 
+            id libero lacus. Duis tempus convallis magna feugiat rutrum. Cras ut pretium felis. Integer a mauris arcu. Fusce dapibus turpis convall
         </p>
     </div>
     <div class="close-about-content"><a href="#" class="closeAbout">Close?</a></div>
@@ -81,7 +75,6 @@
                         <h2> LOREM </h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipisicing  <br/>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            <br/> ut labore et dolore magna
                         </p>
                     </div>
             </div>
@@ -101,11 +94,6 @@
         </div>
         <script>
 
-        /*
-        Currently Masonry does not work - ignore
-        This might help: https://stackoverflow.com/questions/12088733/jquery-masonry-not-working
-        */
-
         $(document).ready(function($){
             var $container = $('.main');
             setTimeout(function(){
@@ -121,11 +109,6 @@
                 $('.contact-content, .closeContact, .close-contact-content').fadeOut(1800);
                 $('.about-content, .closeAbout, .close-about-content').fadeToggle(1800);
             });
-            /*
-            $(".about-content-close").click(function() {
-                $('.about-content').fadeOut(2000);
-            });
-            */
 
             /* When "contact" is clicked: display "contact-content" */
             $('.contact,.closeContact').click(function() {
@@ -135,48 +118,6 @@
 
             });
         });
-
-        /*
-        // layout Masonry after each image loads
-        $container.imagesLoaded().progress( function() {
-          $container.masonry('layout');
-        });
-        */
-
-        /* // The following code for some reason stopped working (but this above doea)
-        var $grid = $('.main').masonry({
-            // columnWidth: '.grid-sizer',
-            itemSelector: '.container',
-            percentPosition: true
-        });
-
-        // layout Masonry after each image loads
-        $grid.imagesLoaded().progress( function() {
-          $grid.masonry('layout');
-        });
-        */
-
-        /*
-        $.fn.extend({
-            animateCss: function (animationName) {
-                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-                this.addClass('animated ' + animationName).one(animationEnd, function() {
-                    $(this).removeClass('animated ' + animationName);
-                });
-                return this;
-            }
-        });
-
-        $(document).ready(function() {
-            $('.content').mouseover(function() {
-                $(this).animateCss('fadeInUp');
-            });  */
-            /* // Doesn't work
-            $(this).mouseleave(function() {
-                $(this).animateCss('fadeOutDown');
-            });
-            *
-        }); */
 
         </script>
     </body>
