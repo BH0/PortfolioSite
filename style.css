@@ -183,7 +183,7 @@ body {
   align-content: center;
   flex-wrap: wrap;
   z-index: 0;
-  width: 30%;
+  width: 20%; // 30%;
   height: auto; }
   .container:hover {
     z-index: 2;
