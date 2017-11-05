@@ -255,9 +255,10 @@ filter: brightness(100%);
     animation: fadeInUp 3s; }
 
 @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
-   img { 
+   img, /content  { 
       width: 2px; 
-      height: 5px; 
+      height: 5px;
+     color: blue; 
   } 
 }
 
