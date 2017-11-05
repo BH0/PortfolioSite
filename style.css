@@ -56,7 +56,6 @@ body {
   margin-right: 2em; 
   overflow: hidden; 
   overflow-y: hidden; 
-  background-color: #590016; 
 }
 
 .header {
@@ -168,7 +167,7 @@ body {
 .main {
   z-index: 0;
   display: flex;
-  background-color: black;
+  background-color: ; 590016; // black;
   flex-wrap: wrap;
   position: absolute;
   left: 5%;
