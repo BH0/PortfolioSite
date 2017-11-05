@@ -59,12 +59,6 @@ body {
   background-color: #590016; 
 }
 
-
-* { 
-    color: blue; 
-  background-color: yellow; 
-} 
-
 .header {
   padding-top: 30px;
   padding-bottom: 80px;
@@ -257,7 +251,6 @@ filter: brightness(100%);
     left: 60px;
     padding-right: 20px; 
     font-size: 28px; 
-  color: purple; 
 }
   .content:hover p {
     visibility: visible;
@@ -288,8 +281,3 @@ img {
 
 /*# sourceMappingURL=style.css.map */
 
-
-* {
-    color: yellow; 
-    background-color: blue; 
-} 
