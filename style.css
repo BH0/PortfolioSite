@@ -59,6 +59,12 @@ body {
   background-color: #590016; 
 }
 
+
+* { 
+    color: blue; 
+  background-color: yellow; 
+} 
+
 .header {
   padding-top: 30px;
   padding-bottom: 80px;
