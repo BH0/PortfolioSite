@@ -278,5 +278,22 @@ img {
     animation-fill-mode: forwards;
     animation-iteration-count: 1; }
 
+
+/* Snow */ 
+.snow {
+    position: fixed; 
+    animation-name: snowFall;
+    animation-duration: 4s;
+}
+
+@keyframes snowFall {
+  0% { 
+    top: 0px; 
+ }
+ 100% { 
+    top: 700px; 
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
 
