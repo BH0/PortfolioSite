@@ -129,13 +129,21 @@
             snow.style.cssText = "z-index:100;"
             snow.style.cssText = "top:100px;"; 
             */ 
-            var snow = document.createElement("div"); 
-            var _ = document.createTextNode("."); 
-            snow.appendChild(_); 
-            var main = document.getElementById("main-body"); 
-            snow.classList.add("snow");
-            snow.style.cssText = "background-color:white;width:3%;border-radius:90%;";
-            main.appendChild(snow); 
+            function createSniw() { // shoud possibly be an object / constructo function  
+                var snow = document.createElement("div"); 
+                var _ = document.createTextNode("."); 
+                snow.appendChild(_); 
+                var main = document.getElementById("main-body"); 
+                snow.classList.add("snow");
+                snow.style.cssText = "background-color:white;width:3%;border-radius:90%;";
+                main.appendChild(snow); 
+                
+                /* if (snow.style.top > 500 + "px") { 
+                
+                } 
+                */ 
+            } 
+            setInterval(10, createSnow); 
 
         }); 
             
