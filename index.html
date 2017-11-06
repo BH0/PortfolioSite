@@ -136,12 +136,13 @@
                 var main = document.getElementById("main-body"); 
                 snow.classList.add("snow");
                 snow.style.cssText = "background-color:white;width:3%;border-radius:90%;";
+                snow.style.left = Math.random() * 50 + "px";
                 main.appendChild(snow); 
                 
                 /* if (snow.style.top > 500 + "px") { 
                 
                 } 
-                */ 
+                */  
             } 
             setInterval(createSnow, 100); 
 
