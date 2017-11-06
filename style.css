@@ -283,7 +283,7 @@ img {
 .snow {
     position: fixed; 
     animation-name: snowFall;
-    animation-duration: 4s; 
+    animation-duration: 6s; 
     z-index: 100; 
 }
 
@@ -292,7 +292,7 @@ img {
     top: 0px; 
  }
  100% { 
-    top: 700px; 
+    top: 800px; 
   }
 }
 
